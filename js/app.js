@@ -50,3 +50,32 @@ function mostrarTodasTareas(arrayTareas) {
     eventoBotones();
 }
 
+// funcion para añadir tarea recogida desde el formulario
+function addTarea(event) {
+    event.preventDefault();
+    let titulo = input.value;
+    let prioridad = priority.value;
+    let alerta = document.getElementById('alerta')
+    console.log(alerta);
+
+    if (titulo != '' && prioridad != '') {
+        alerta.style.display = 'none'
+        let tarea = {
+            idtarea: idTarea,
+            titulo: titulo,
+            prioridad: prioridad
+        }
+        idTarea++;
+        
+        //mostrarTarea(tarea)
+        tasks.push(tarea);
+        mostrarTodasTareas(tasks)
+        eventoBotones();
+    } else {
+        alerta.style.display = 'block'
+    }
+    input.value = '';
+        priority.selectedIndex = 0
+
+
+}
