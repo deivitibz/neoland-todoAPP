@@ -66,8 +66,6 @@ function addTarea(event) {
             prioridad: prioridad
         }
         idTarea++;
-        
-        //mostrarTarea(tarea)
         tasks.push(tarea);
         mostrarTodasTareas(tasks)
         eventoBotones();
@@ -107,17 +105,6 @@ function removeTask(event) {
 
     console.log(posicionBorrar);
     tasks.splice(posicionBorrar, 1)
-
-    /* event.target.parentNode.parentNode.remove();
-    if (event.target.id == 'btn-remove') {
-        let id = event.target.parentNode.parentNode.dataset.id;
-        //console.log(id);
-        for (let i = 0; i < tasks.length; i++) {
-            if (tasks[i].idtarea == id) {
-                tasks.splice(i, 1)
-            }
-        }
-    } */
 }
 
 // funcion para filtrar las tareas desde el input de busqueda
