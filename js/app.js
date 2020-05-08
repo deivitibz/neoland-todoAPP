@@ -138,3 +138,28 @@ function filtrarTareas(event) {
     }
     mostrarTodasTareas(arrayBuscar)
 }
+
+// funcion para filtrar las tareas desde el selector de prioridad
+
+let selectSearch = document.querySelector('#search-priority')
+selectSearch.addEventListener('change', filtrarPrioridad)
+
+function filtrarPrioridad(event){
+    let arrayPrioridad = new Array();
+    let selectPriority = event.target.value.toLowerCase();
+
+    console.log(selectPriority);
+    
+
+    for ( task of tasks){
+        if(task.prioridad == selectPriority)
+        arrayPrioridad.push(task) 
+    }
+    mostrarTodasTareas(arrayPrioridad)
+}
+
+
+// inicio app
+
+
+mostrarTodasTareas(tasks)
