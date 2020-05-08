@@ -10,6 +10,74 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+    <div class="container wrapper row mx-auto">
+      <header class="container-fluid bg-dark text-white text-center py-4">
+          
+          <h3>Lista Trolleos APP </h3>
+      
+      </header>
+      <aside class="col-md-4 col-sm-12 bg-light text-center">
+          <div id="alerta" class="alert alert-danger">
+              <strong><i class="fas fa-hand-paper"></i></strong> 
+              <p>No puedes dejar ninguno de los campos vacios</p>
+            </div>
+              <h3>Tarea</h3>
+              <div class="card-body">
+                  <input id="input-task" type="text" placeholder="Introduce una tarea" class="form-control">
+                  <select id="select-priority" class="form-control my-2" name="" >
+                      <option value="">Selecciona una prioridad</option>
+                      <option value="urgente">Urgente</option>
+                      <option value="diaria">Diaria</option>
+                      <option value="mensual">Mensual</option>
+                  </select>
+                  <button id="btn-add" class="btn btn-dark btn-block mt-3">Añadir</button>
+              </div>
+              <h3>Buscador</h3>
+              <div class="card-body">
+                  <input id="input-search" type="text" placeholder="Introduce una busqueda" class="form-control">
+                  <select id="search-priority" class="form-control my-2" name="" >
+                      <option value="">Selecciona una busqueda</option>
+                      <option value="urgente">Urgente</option>
+                      <option value="diaria">Diaria</option>
+                      <option value="mensual">Mensual</option>
+                  </select>
+              </div>
+          
+      </aside>
+      <main class="col-md-8 col-sm-12 bg-light">
+          <div class="row">
+              <div class="col-12 pt-3">
+                          <ul id="mostrar" class="list-groups"><!-- 
+                              <li class="list-group-item">
+                                  <div class="bg-danger p-2"></div>
+                                  <h3>titulo</h3>
+                                  <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                  <button class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                              
+                              </li>
+                              <li class="list-group-item">
+                                  <div class="bg-danger p-2"></div>
+                                  <h3>titulo</h3>
+                                  <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                  <button class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                              
+                              </li>
+                              <li class="list-group-item">
+                                  <div class="bg-danger p-2"></div>
+                                  <h3>titulo</h3>
+                                  <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                  <button class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                              
+                              </li> -->
+                          </ul>
+              </div>
+          </div>
+      </main>
+      <footer class="container-fluid bg-dark text-white text-center py-3">
+          <i class="fas fa-at"></i><span>deivit</span> <strong>neolandFullStack 2020</strong> made with <i class="fas fa-heart"></i> and <strong>boots-trump</strong>
+      </footer>
+      
+  </div>
       
     <!-- Optional JavaScript -->
     <script src="js/app.js"></script>
