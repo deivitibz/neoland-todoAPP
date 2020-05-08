@@ -119,3 +119,22 @@ function removeTask(event) {
         }
     } */
 }
+
+// funcion para filtrar las tareas desde el input de busqueda
+
+let inputSearch = document.getElementById('input-search');
+inputSearch.addEventListener('input',filtrarTareas)
+
+function filtrarTareas(event) {
+    let arrayBuscar = new Array();
+    let inputBuscar = event.target.value
+    
+    for (task of tasks){
+
+         if (task.titulo.toLowerCase().includes(inputBuscar)){
+            arrayBuscar.push(task)
+        }
+            
+    }
+    mostrarTodasTareas(arrayBuscar)
+}
