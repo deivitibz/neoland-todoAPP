@@ -79,3 +79,13 @@ function addTarea(event) {
 
 
 }
+
+function eventoBotones() {
+    let btnDelete = document.querySelectorAll('#delete'); // captura botones borrar
+
+    for (boton of btnDelete) {
+        boton.addEventListener('click', removeTask); // añade evento click al boton de borrar y llama a la funcion deleteTask
+
+    }
+
+}
