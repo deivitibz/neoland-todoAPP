@@ -39,3 +39,14 @@ function mostrarTarea(tarea) {
                 `
 
 }
+
+// funcion para mostrar todas las tareas
+
+function mostrarTodasTareas(arrayTareas) {
+    ul.innerHTML = '';
+    for (tarea of arrayTareas) {
+        mostrarTarea(tarea);
+    }
+    eventoBotones();
+}
+
