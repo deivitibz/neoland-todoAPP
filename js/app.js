@@ -89,3 +89,33 @@ function eventoBotones() {
     }
 
 }
+
+// funcion para borrar las tareas del html y del array 
+
+function removeTask(event) {
+
+    let id = event.target.dataset.id;
+    let tareaEliminar = event.target.parentNode;
+    console.log(tareaEliminar);
+
+    tareaEliminar.parentNode.removeChild(tareaEliminar)
+
+    //buscar en el array la posicion
+    let posicionBorrar = tasks.findIndex(task => {
+        return task.titulo == id
+    })
+
+    console.log(posicionBorrar);
+    tasks.splice(posicionBorrar, 1)
+
+    /* event.target.parentNode.parentNode.remove();
+    if (event.target.id == 'btn-remove') {
+        let id = event.target.parentNode.parentNode.dataset.id;
+        //console.log(id);
+        for (let i = 0; i < tasks.length; i++) {
+            if (tasks[i].idtarea == id) {
+                tasks.splice(i, 1)
+            }
+        }
+    } */
+}
